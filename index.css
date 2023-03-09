@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+
+
+}
+
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lobster', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  justify-content: center;
+  background-color: #ff90e8;
+
+  
+  
+}
+
+
+
+.texto {
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold
+  /* border: solid; */
+
+
+  
+  
+}
+
+
+.texto2 {
+  margin-top: 20%;
+  display: flex;
+  margin-right: +400px;
+  margin-left: 5%;
+  margin-top: -14.5%;
+  /* border: solid; */
+  transform: scale();
+  font-weight: bold
+
+  
+  
+}
+
+
+
+
+/* inspired form gumroad website */
+.button {
+  --bg: #000;
+  --hover-bg: #ff90e8;
+  --hover-text: #000;
+  color: #fff;
+  border: 1px solid var(--bg);
+  border-radius: 10px;
+  margin-top: 5%;
+  background: var(--bg);
+  transition: 0.2s;
+  text-align: center;
+  padding: 16px 25px;
+  
+}
+
+
+.container {
+  text-align: center;
+  
+}
+
+
+
+.button:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem,-0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.button:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+svg {
+  width: 300%;
+}
+
+/*
+
+
+*/
+
+.container {
+  text-align: center;
+  
+}
+
+.navbar {
+  text-align: right;
+  height: 3rem;
+  
+}
+
+.navbar a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(42, 51, 53);
+  line-height: 3rem;
+  margin-right: 5%;
+  border-top: 3px solid transparent; /* adiciona uma borda superior transparente */
+  
+}
+
+.navbar a:hover{
+  border-top-color: red; /* altera a cor da borda superior em :hover */
+  color: black;
+}
+
+.input {
+  max-width: 190px;
+  height: 30px;
+  border: 2px solid transparent;
+  outline: none;
+  border-bottom: 2px solid #3f3f3f;
+  caret-color: #3f3f3f;
+  background-color: #212121;
+  padding: 5px;
+  transition: .5s linear;
+  font-family: monospace;
+  letter-spacing: 1px;
+}
+
+.input:focus {
+  border: 2px solid #96115c;
+  caret-color: #96115c;
+  color: #96115c;
+  box-shadow: 4px 4px 10px #070707;
+}
+
+.input:focus::placeholder {
+  color: #96115c;
+}
+
+.nome {
+  text-align: left;
+  margin-left: 10%;
+  margin-top: -3rem
+
+
+}
+
+.texto {
+  margin-bottom: 20px;
+}
+
+.animacao {
+  animation-duration: 1.8s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animacao-texto {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.texto.animacao {
+  animation-name: animacao-texto;
+}
+
+
+@keyframes animacao-nome {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+.nome {
+  opacity: 0;
+  visibility: hidden;
+}
+ 
+
+.animacao.nome {
+  animation-name: animacao-nome;
+  animation-delay: 1.8s;
+}
+
+
+.oculto {
+  display: none;
+}
+
+.container.mostrar-texto .texto {
+  opacity: 1;
+}
+

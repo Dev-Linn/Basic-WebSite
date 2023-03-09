@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Agenda</title>
+    <script src="index.js" defer></script>
+  </head>
+
+
+  <body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="https://github.com/Dev-Linn">Github</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="#">Login</a>
+    </div>
+
+    <div class="container">
+        <div class="texto animacao">
+            <svg viewBox="0 0 1300 200" xmlns="http://www.w3.org/2000/svg">
+                <path id="path">
+                    <animate attributeName="d" from="M0,110 H0" to="M0,110 H1100" dur="1.8s" begin="0s" fill="freeze" />
+                </path>
+                <text font-size="32">
+                    <textPath id="texto" xlink:href="#path">Olá! me conte mais sobre você, como eu posso te chamar? </textPath>
+                </text>
+            </svg>
+        </div>
+        <div class="nome animacao">
+            <form>
+                <input placeholder="Type here" class="input" type="text" name="name" id="name">
+                <input type="submit" id="send" class="input" value="enviar">
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="texto animacao hidden">
+        <svg viewBox="0 0 1300 200" xmlns="http://www.w3.org/2000/svg">
+          <path id="path2" class="animacao">
+            <animate attributeName="d" from="M0,110 H0" to="M0,110 H1100" dur="5.8s" begin="0s" fill="freeze" />
+          </path>
+          <text font-size="32">
+            <textPath xlink:href="#path2" id="texto2">Olá! "nome" </textPath>
+          </text>
+        </svg>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="texto animacao">
+          <svg viewBox="0 0 1300 200" xmlns="http://www.w3.org/2000/svg">
+              <path id="path">
+                  <animate attributeName="d" from="M0,110 H0" to="M0,110 H1100" dur="1.8s" begin="0s" fill="freeze" />
+              </path>
+              <text font-size="32">
+                  <textPath id="texto" xlink:href="#path">Seu cadastro foi concluido! </textPath>
+              </text>
+          </svg>
+      </div>
+    
+
+    <script>
+        const sendBtn = document.querySelector('#send');
+        const nomeInput = document.querySelector('#name');
+        const textPathElement = document.querySelector('#texto2');
+
+        sendBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            const nome = nomeInput.value;
+            textPathElement.textContent = `Olá! ${nome} `;
+        });
+    </script>
+</body>
